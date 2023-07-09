@@ -33,6 +33,37 @@ const questions = [
             }
         }
     },
+     {
+            type: 'checkbox',
+            name: 'tableOfContents',
+            message: 'Select the sections to include in the Table of Contents (Use spacebar to select)',
+            choices: [
+                {
+                    name: 'Installation',
+                    value: 'installation'
+                },
+                {
+                    name: 'Usage',
+                    value: 'usage'
+                },
+                {
+                    name: 'Contributing',
+                    value: 'contributing'
+                },
+                {
+                    name: 'Tests',
+                    value: 'tests'
+                },
+                {
+                    name: 'Questions',
+                    value: 'questions'
+                },
+                {
+                    name: 'License',
+                    value: 'license'
+                }
+            ]
+        },  
     {
         type: 'input',
         name: 'installation',
@@ -134,7 +165,7 @@ function writeToFile(fileName, data) {
     if (!fs.existsSync(directory)) {
         fs.mkdirSync(directory);
     }
-    
+
     fs.writeFile(fileName, data, err => {
         if (err) throw err;
         console.log('README complete! Check out README.md to see the output!');

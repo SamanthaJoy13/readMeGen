@@ -1,17 +1,17 @@
-# ex
+# README Generator
   ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
   ## Description
-  ex
+  example
   ## Table of Contents
-  undefined
+  installation,usage,contributing,tests,questions,license
   ## Installation
-  ex
+  example
   ## Usage
-  ex
+  example
   ## Contributing
-  ex
+  example
   ## Tests
-  ex
+  example
   ## Questions
   undefined
 
