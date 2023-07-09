@@ -2,19 +2,19 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   
-    // if (license === 'MIT') {
-    //   return `![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)`
-    // } else if (license === 'APACHE 2.0') {
-    //   return `![GitHub license](https://img.shields.io/badge/license-APACHE%202.0-blue.svg)`
-    // } else if (license === 'GPL 3.0') {
-    //   return `![GitHub license](https://img.shields.io/badge/license-GPL%203.0-blue.svg)`
-    // } else if (license === 'BSD 3') {
-    //   return `![GitHub license](https://img.shields.io/badge/license-BSD%203-blue.svg)`
-    // } else {
-    //   return ''
-    // }
+     if (license === 'MIT') {
+       return `![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)`
+     } else if (license === 'APACHE 2.0') {
+       return `![GitHub license](https://img.shields.io/badge/license-APACHE%202.0-blue.svg)`
+     } else if (license === 'GPL 3.0') {
+       return `![GitHub license](https://img.shields.io/badge/license-GPL%203.0-blue.svg)`
+     } else if (license === 'BSD 3') {
+       return `![GitHub license](https://img.shields.io/badge/license-BSD%203-blue.svg)`
+     } else {
+       return ''
+     };
   
-    switch (license) {
+   /*  switch (license) {
       case 'MIT':
         return `![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)`
         break;
@@ -29,8 +29,7 @@ function renderLicenseBadge(license) {
         break;
       default:
         return ''
-    }
-
+    } */
 }
 
 // TODO: Create a function that returns the license link
