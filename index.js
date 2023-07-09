@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
+const directory = './dist';
 
 
 // TODO: Create an array of questions for user input
@@ -116,18 +117,24 @@ const questions = [
         name: 'email',
         message: 'Enter your email address. (Required)',
         validate: emailInput => {
-            if (emailInput) {
+            // Regular expression pattern to validate email format
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailInput && emailPattern.test(emailInput)) {
                 return true;
             } else {
-                console.log('Please enter your email address!');
+                console.log('Please enter a valid email address!');
                 return false;
             }
         }
-    }   
+    }      
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+    if (!fs.existsSync(directory)) {
+        fs.mkdirSync(directory);
+    }
+    
     fs.writeFile(fileName, data, err => {
         if (err) throw err;
         console.log('README complete! Check out README.md to see the output!');
