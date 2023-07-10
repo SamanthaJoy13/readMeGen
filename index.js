@@ -132,6 +132,19 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'questions',
+        message: 'Provide instructions for users to reach you with additional questions. (Required)',
+        validate: questionsInput => {
+            if (questionsInput) {
+                return true;
+            } else {
+                console.log('Please enter instructions for users to reach you with additional questions!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
         name: 'github',
         message: 'Enter your GitHub username. (Required)',
         validate: githubInput => {
