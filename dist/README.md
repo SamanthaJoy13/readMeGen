@@ -9,9 +9,9 @@
   ## Usage
   example
   ## Contributing
-  ex
+  example
   ## Tests
-  ex
+  example
   ## Questions
-  undefined
+  example
 
